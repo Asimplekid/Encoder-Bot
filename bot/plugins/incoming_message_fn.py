@@ -117,8 +117,6 @@ async def incoming_compress_message_f(update):
       if 'episode_number' in new_name.keys():
         episode_no = new_name['episode_number']
         joined_string = f"{joined_string}" + f" [Episode {episode_no}]"
-      LOGGER.info(saved_file_path)  
-      LOGGER.info(video)
       if( video is None ):
         try:
           await sent_message.edit_text(
