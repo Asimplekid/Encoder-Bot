@@ -44,8 +44,7 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
            stdout=asyncio.subprocess.PIPE,
            stderr=asyncio.subprocess.PIPE,
           )
-    
-    LOGGER.info("ffmpeg_process: "+str(process.pid))
+ 
     pid_list.insert(0, process.pid)
     status = output_directory + "/status.json"
     with open(status, 'r+') as f:
